@@ -1,0 +1,1126 @@
+/* Universal Selector */
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar Styling */
+*::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: lightblue; /* Scrollbar color */
+  border-radius: 6px; /* Rounded edges */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: lightblue; /* Hover effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: lightblue; /* Thumb and track colors */
+}
+.whatsapp-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 25px;
+  width: 150px;
+  height: fit-content;
+}
+.whatsapp-icon h3 {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* top navbar................................. */
+.top-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  height: 30px;
+  color: white;
+}
+ul a {
+  list-style: none;
+  text-decoration: none;
+}
+ul a li {
+  color: white;
+}
+/* .logo-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+} */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcf5eb;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 20px;
+  height: 100px;
+}
+.navbar a {
+  list-style: none;
+  text-decoration: none;
+}
+.navbar .logo-text{
+color: #2c3e50;
+text-align: center;
+}
+.navbar p{
+  margin-top: -22px;
+  padding: 4px;
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  
+}
+.navbar a h1{
+  width: 200px;
+  text-align: center;
+  font-size: 55px;
+  padding: 10px;
+  /* font-family: "Lucida Handwriting", cursive; */
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+
+}
+@media (max-width: 972px) {
+  .navbar a h1{
+  width: 100px;
+  font-size: 35px;
+  }
+ 
+}
+.logo-image {
+  height: 50px;
+}
+
+/* Navbar Links */
+.navbar-list ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-list ul a {
+  text-decoration: none;
+}
+
+.navbar-list ul a li {
+  font-size: 17px;
+  color: black;
+  margin: 0 15px;
+  transition: border-bottom 0.3s;
+}
+
+.navbar-list ul a li:hover {
+  border-bottom: 4px solid lightblue;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none; /* Initially hide navbar links */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fcf5eb;
+    margin-top: 35px;
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .navbar-list ul {
+    flex-direction:column;
+    
+  }
+
+  .navbar-list ul a li {
+    margin: 10px 10px;
+    font-size: 20px;
+  }
+  .navbar-list ul a li:hover{
+    color: #f1c40f;
+  }
+  .navbar-list.active {
+    display: flex;
+    color:#2c3e50;
+    text-decoration: none;
+  }
+  .burger {
+    color: lightgray;
+  }
+  .burger .line {
+    color: lightgrey;
+  }
+}
+/* header............................................ */
+.hero-dashboard-image {
+  object-fit: contain;
+  animation: jump 1s infinite ease-in-out;
+  /* min-width: 600px;
+  height: 500px; */
+  max-width: 600px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 150px;
+}
+
+.hero-text-title {
+  font-weight: 200;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.account-services {
+  font-family: "Lucida Handwriting", cursive;
+  border-bottom: 4px solid lightblue;
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust based on your content */
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@media (max-width: 1052px) {
+  .hero-text-title {
+    font-weight: 200;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 972px) {
+  .hero-text-title {
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .hero-dashboard-image {
+    width: 400px;
+    margin-top: 20px;
+  }
+}
+.hero-text-para {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.accounts-title {
+  text-align: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.account-images {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.account-images-all {
+  object-fit: contain;
+}
+.sales-success {
+  font-family: "Lucida Handwriting", cursive;
+  display: inline-block;
+  border-bottom: 4px solid lightblue;
+  animation: jump 1s infinite ease-in-out;
+}
+.sales-success1 {
+  font-family: "Lucida Handwriting", cursive;
+  display: inline-block;
+  border-bottom: 4px solid lightblue;
+  /* animation: jump 1s infinite ease-in-out; */
+}
+.sales-success2 {
+  font-family: "Lucida Handwriting", cursive;
+  display: inline-block;
+  animation: jump 1s infinite ease-in-out;
+}
+
+@media (max-width: 748px) {
+  .accounts-title {
+    font-size: 30px;
+  }
+  .account-images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 345px) {
+  .accounts-title {
+    font-size: 25px;
+    gap: 15px;
+  }
+  .account-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ 
+}
+@media (max-width: 585px){
+  .sales-success1 {
+    border-bottom: none;
+  }
+}
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0); /* Normal position */
+  }
+  50% {
+    transform: translateY(-5px); /* Move up */
+  }
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 100;
+}
+.uparrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf5eb;
+  width: 50px;
+  height: 50px;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 100;
+  border-radius: 50%;
+  list-style: none;
+  cursor: pointer;
+  border: 2px solid lightgrey;
+}
+
+/* why sell online section....................... */
+.why-sell-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.why-sell {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.why-sell-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #fff;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* text-align: center; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: auto;
+  border-left: 4px solid lightblue;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow: hidden; /* Prevents content spilling */
+  text-overflow: ellipsis;
+}
+.why-sell-content h1 {
+  /* color: darkgreen; */
+  color: #f7ad00;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.why-sell-content li {
+  font-size: 16px;
+  list-style: none;
+  line-height: 20px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
+/* categories and accessories............................ */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.categories-image {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  background-size: cover;
+  border: 8px solid white;
+}
+.all-category {
+  position: relative;
+}
+.categories-title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+/* our services ....................... */
+
+.our-services {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if items exceed the container width */
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 50px;
+  gap: 20px;
+  background-color: #f7ad00;
+}
+
+
+.our-services-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+.all-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 20px;
+  width: 150px; 
+  height: 150px; 
+  text-align: center; 
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #f9f9f9; 
+}
+.all-services:hover {
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.all-services img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.all-services h3 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+/* form............................... */
+.form-main {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+/* .lets-connect {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  font-family: "Lucida Handwriting", cursive;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 300;
+  background-color: rgba(154, 148, 148, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+} */
+/* .lets-connect1 {
+  position: absolute;
+  top: 400px;
+  left: 170px;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.5);
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
+} */
+.enquiry {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  width:500px;
+  /* max-width: 400px; */
+  height: auto;
+  border-radius: 20px;
+  
+ 
+}
+@media (max-width:652px){
+
+  .form-main img{
+    display: none;
+  }
+}
+@media (max-width:545px){
+  .enquiry{
+  width:400px;
+  }
+}
+@media (max-width:435px){
+  .enquiry{
+  width:300px;
+  }
+}
+label {
+  font-weight: 400;
+  display: block;
+  margin-bottom: 6px;
+  color: darkgreen;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+button {
+  background: #f7ad00;
+  font-family: "Lucida Handwriting", cursive;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+#response-message {
+  font-weight: 400;
+  margin-top: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+/* media queries................ */
+@media (max-width: 768px) {
+  .top-navbar {
+    font-size: 12px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hero-text-title {
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+  .hero-dashboard-image {
+    text-align: center;
+    width: 500px;
+    margin-top: 20px;
+  }
+  .why-sell-content {
+    font-size: 14px; /* Smaller text for better fit */
+    padding: 5px;
+  }
+  .why-sell {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.sky-rocket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .hero-dashboard-image {
+    width: 450px;
+  }
+  .hero-text-title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 448px) {
+  .hero-dashboard-image {
+    width: 400px;
+  }
+  .hero-text-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-dashboard-image {
+    width: 350px;
+  }
+  .hero-text-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 660px) {
+  .top-navbar {
+    display: none;
+  }
+  .hero-text-title {
+    line-height: 60px;
+    margin-bottom: 10px;
+  }
+  .why-sell {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-main {
+    display: flex;
+    flex-direction: column;
+    background: none;
+  }
+}
+/* Services Section.................... */
+.services-section {
+  background-image: url(./assets/form3.jpg);
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+.services-title {
+  font-size: 50px;
+  letter-spacing: 2px;
+  /* font-weight: 300; */
+  font-family: "Lucida Handwriting", cursive;
+  color: black;
+  font: bold;
+}
+.services-includes a {
+  text-decoration: none;
+}
+.services-includes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -200px;
+  text-align: center;
+}
+.main-services-contents {
+  position: relative;
+}
+.services-contents {
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  height: 550px;
+  /* border: 4px solid lightgoldenrodyellow; */
+}
+
+.main-services-contents a h3 {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  color: white;
+  z-index: 1;
+  background-color: #f7ad00;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 65%;
+}
+.main-services-contents a h3:hover {
+  color: #f7ad00;
+  background-color: #f1f1f1;
+}
+.services-contents img {
+  width: 280px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+@media (max-width: 1000px) {
+  .account-management-img {
+    display: none;
+  }
+}
+
+.services-contents h2 {
+  text-align: center;
+  font-weight: 300;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* font-family: "Lucida Handwriting", cursive; */
+}
+.services-contents ul {
+  list-style: none;
+  text-align: start;
+}
+.services-contents ul li {
+  padding: 4px;
+  margin: 2px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: lightslategray;
+  text-transform: capitalize;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "papyrus";
+  margin: 10px;
+}
+
+@media (max-width: 1280px) {
+  .services-includes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1062px) {
+  .services-includes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 701px) {
+  .services-includes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 624px) {
+  .services-includes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 325px) {
+  .form-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* learn more styling......................................... */
+.services {
+  display: flex;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.account-management-img {
+  padding: 20px;
+  width: 600px;
+  height: 850px;
+  object-fit: cover;
+}
+.account-management-img :hover {
+  border: 2px solid red;
+}
+
+.services-details {
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-height: 850px;
+  overflow-y: scroll;
+}
+
+.services-details h2 {
+  font-size: 28px;
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.services-details p {
+  letter-spacing: 1px;
+  line-height: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
+}
+.services-details h3 {
+  font-size: 18px;
+  font-family: "Lucida Handwriting", cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.services-details dl dt {
+  color: #f7ad00;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+.services-details dl dd {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.services-menu {
+  transition: transform 0.8s ease-in-out;
+}
+.services-menu:hover {
+  opacity: 0.8;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 740px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 325px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* about us section */
+
+.about-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.about-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.about-section {
+  margin-top: 30px;
+}
+
+.about-section h2 {
+  color:#f7ad00;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+}
+
+footer {
+  background-color:#2c3e50;
+  color: white;
+  padding: 40px 10%;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+  width: 22%;
+  min-width: 250px;
+  max-width: 300px;
+  color: white;
+}
+
+.footer-about h3, .footer-links h3, .footer-contact h3, .footer-social h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:white;
+  font-family: "Lucida Handwriting", cursive;
+
+}
+
+.footer-about p, .footer-contact p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color:white;
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  color: white;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-links ul li a {
+  color:white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #f1c40f;
+}
+
+.footer-social a {
+  color:white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f1c40f;
+}
+
+/* Google Map Styling */
+.footer-map {
+  width: 100%;
+  height: 300px;
+  margin-top: 40px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-weight: 300;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about, .footer-links, .footer-contact, .footer-social {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
